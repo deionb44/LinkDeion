@@ -114,14 +114,7 @@ image = Image.open('Georgetown.jpg')
 st.image(image, caption='Georgetown University MSBA Project')
 st.header("Predicting if you are a LinkedIn user")
 
-import pandas as pd
-import numpy as np
-import altair as alt
 
-c = alt.Chart(sm).mark_circle().encode(
-    x='age', y='income', size='income', color='income', tooltip=['age', 'income'])
-
-st.altair_chart(c, use_container_width=True)
 user_age = st.number_input('Please Enter or Toggle to your age', min_value=10,max_value=97,value=18, step=1)
 st.write('Your Chosen Age Is ', user_age)
 user_gender=st.selectbox("Please provide your gender? If Female chose ONE, if Male chose ZERO", options=[1,0])
