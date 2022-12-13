@@ -8,6 +8,7 @@
 
 import pandas as pd
 s = pd.read_csv('social_media_usage.csv')
+s.shape
 
 
 # #### Q2 - Define a function called clean_sm that takes one input, x, and uses `np.where` to check whether x is equal to 1. If it is, make the value of x = 1, otherwise make it 0. Return x. Create a toy dataframe with three rows and two columns and test your function to make sure it works as expected
@@ -80,8 +81,8 @@ lr.fit(X_train,y_train)
 
 # In[7]:
 
-
-from sklearn.metrics import classification_report 
+ 
+from sklearn.metrics import classification_report  
 from sklearn.metrics import accuracy_score
 
 # Make predictions using the model and the testing data 
@@ -91,7 +92,6 @@ print('Accuracy: %.3f' % accuracy_score(y_test, y_pred))
 ##My Created Confussion Matrix of model 
 import matplotlib.pyplot as plt 
 import pylab as pl 
-# #### Q9 - Aside from accuracy, there are three other metrics used to evaluate model performance: precision, recall, and F1 score. Use the results in the confusion matrix to calculate each of these metrics by hand. Discuss each metric and give an actual example of when it might be the preferred metric of evaluation. After calculating the metrics by hand, create a classification_report using sklearn and check to ensure your metrics match those of the classification_report.
 
 # In[9]:
 
@@ -106,7 +106,7 @@ print(classification_report(y_test, y_pred))
 
 # #### Q10 - Use the model to make predictions. For instance, what is the probability that a high income (e.g. income=8), with a high level of education (e.g. 7), non-parent who is married female and 42 years old uses LinkedIn? How does the probability change if another person is 82 years old, but otherwise the same?
 
-# In[23]:
+# In[24]:
 
 
 import streamlit as st
@@ -150,7 +150,3 @@ st.video(video_bytes)
 
 
 # In[ ]:
-
-
-
-
