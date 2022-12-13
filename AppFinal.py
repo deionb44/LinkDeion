@@ -150,7 +150,7 @@ st.subheader("Your probability to utilizate Linkedin")
 st.write(probs)
 
 
-st.subheader("Learn More About Georgetowns MBA Programs")
+st.subheader("Learn More About Georgetown's MBA Programs")
 video_file = open('Your Moment of Truth.mp4', 'rb')
 video_bytes = video_file.read()
 
