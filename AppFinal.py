@@ -8,7 +8,7 @@
 
 import pandas as pd
 s = pd.read_csv('social_media_usage.csv')
-s.shape
+
 
 
 # #### Q2 - Define a function called clean_sm that takes one input, x, and uses `np.where` to check whether x is equal to 1. If it is, make the value of x = 1, otherwise make it 0. Return x. Create a toy dataframe with three rows and two columns and test your function to make sure it works as expected
