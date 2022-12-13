@@ -88,9 +88,7 @@ from sklearn.metrics import accuracy_score
 y_pred = lr.predict(X_test) 
 ########Accuracy
 print('Accuracy: %.3f' % accuracy_score(y_test, y_pred)) 
-##My Created Confussion Matrix of model 
-import matplotlib.pyplot as plt 
-import pylab as pl 
+
 
 # In[9]:
 
