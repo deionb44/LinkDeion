@@ -134,6 +134,12 @@ user_married=st.selectbox("Please provide your Marital Status? If Married chose 
 user_parent=st.selectbox("Are you a parent? If so chose ONE, if not chose ZERO", options=[1,0])
 st.markdown("What is your income - 1= Less 10k, 2= 10k-20k, 3= 20k-30k, 4=30k-40k, 5=40k-50k, 6=50k-75k, 7= 75k-$100k, 8= 100k-150k")
 user_income=st.slider("What is your income", min_value=1, max_value=8,value=1,step=1)
+sm=ss
+sm.groupby("age", group_keys=False).apply(lambda x: x)
+c = alt.Chart(sm).mark_circle().encode(
+    x='age', y='income', size='income', color='income', tooltip=['age', 'income'])
+
+st.altair_chart(c, use_container_width=True)
 st.markdown("1=Less than high school,2=High school incomplete, 3=High school graduate,4=Some college, no degree,5=Two-year associate degree,6=Four-year college or university degree,7=Some postgraduate or professional schooling")
 user_education=st.slider("What is your education",min_value=1,max_value=7,value=1,step=1)
 
