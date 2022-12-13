@@ -8,7 +8,6 @@
 
 import pandas as pd
 s = pd.read_csv('social_media_usage.csv')
-s.shape
 
 
 # #### Q2 - Define a function called clean_sm that takes one input, x, and uses `np.where` to check whether x is equal to 1. If it is, make the value of x = 1, otherwise make it 0. Return x. Create a toy dataframe with three rows and two columns and test your function to make sure it works as expected
@@ -82,9 +81,7 @@ lr.fit(X_train,y_train)
 # In[7]:
 
 
-from sklearn.metrics import confusion_matrix 
 from sklearn.metrics import classification_report 
-from sklearn.metrics import plot_confusion_matrix 
 from sklearn.metrics import accuracy_score
 
 # Make predictions using the model and the testing data 
@@ -94,30 +91,6 @@ print('Accuracy: %.3f' % accuracy_score(y_test, y_pred))
 ##My Created Confussion Matrix of model 
 import matplotlib.pyplot as plt 
 import pylab as pl 
-con = confusion_matrix(y_test, y_pred) 
-pl.matshow(con) 
-pl.title('Confusion matrix of the classifier') 
-pl.colorbar() 
-pl.show() 
-###Alternative Plot 
-import seaborn as sns 
-import matplotlib.pyplot as plt  
-ax= plt.subplot() 
-sns.heatmap(con, annot=True, fmt='g', ax=ax);
-
-
-# #### Q8 - Create the confusion matrix as a dataframe and add informative column names and index names that indicate what each quadrant represents
-
-# In[8]:
-
-
-# Compare those predictions to the actual test data using a confusion matrix (positive class=1) 
-#confusion_matrix(y_test, y_pred) 
-pd.DataFrame(confusion_matrix(y_test, y_pred), 
-            columns=["Predicted negative", "Predicted positive"], 
-            index=["Actual negative","Actual positive"]).style.background_gradient(cmap="PiYG") 
-
-
 # #### Q9 - Aside from accuracy, there are three other metrics used to evaluate model performance: precision, recall, and F1 score. Use the results in the confusion matrix to calculate each of these metrics by hand. Discuss each metric and give an actual example of when it might be the preferred metric of evaluation. After calculating the metrics by hand, create a classification_report using sklearn and check to ensure your metrics match those of the classification_report.
 
 # In[9]:
