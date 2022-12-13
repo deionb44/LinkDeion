@@ -89,7 +89,7 @@ y_pred = lr.predict(X_test)
 ########Accuracy
 print('Accuracy: %.3f' % accuracy_score(y_test, y_pred)) 
 
-
+import matplotlib.pyplot as plt 
 # In[9]:
 
 
