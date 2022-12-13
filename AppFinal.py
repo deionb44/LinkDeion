@@ -125,6 +125,7 @@ c = alt.Chart(sm).mark_circle().encode(
 
 st.altair_chart(c, use_container_width=True)
 
+st.area_chart(c)
 
 user_age = st.number_input('Please Enter or Toggle to your age', min_value=10,max_value=97,value=18, step=1)
 st.write('Your Chosen Age Is ', user_age)
