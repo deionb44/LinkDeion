@@ -6,9 +6,6 @@
 # In[1]:
 
 
-import os
-os.chdir('C:/Users/toytr/OneDrive/Desktop/my_app')
-print(os.getcwd())
 import pandas as pd
 s = pd.read_csv('social_media_usage.csv')
 s.shape
