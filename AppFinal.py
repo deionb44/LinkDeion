@@ -139,7 +139,7 @@ person=[user_age,user_gender,user_married,user_parent,user_income,user_education
 predicted_class =lr.predict([person])
 probs=lr.predict_proba([person])
 
-st.subheader('Based on provided information, see below to learn your likeness to use Linkedin below')
+st.subheader('Based on provided information, see below to learn your likeliness to use Linkedin below')
 if predicted_class >0:
     label="You are a Linkedin user!"
 else:
